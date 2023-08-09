@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>introduce-munji</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <h1><a href="index.html" style="color: #594327; text-decoration: none;" id="title">Introducing Munji</a></h1>
+    <div class = btns>
+
+        <!-- <input type="button" value="night" style="background-color: #261A15;" id="night_day" onclick="
+            if (document.querySelector('#night_day').value === 'night'){
+            document.querySelector('body').style.backgroundColor = '#261A15';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#title').style.color = '#f2c777' ;
+            document.querySelector('#night_day').value = 'day'
+            }
+            else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('#title').style.color = '#594327' ;
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('#night_day').value = 'night'
+            }
+        "> -->
+
+        <input type="button" value="night" style="background-color: #261A15;" id="night_day" onclick="
+        var target = document.querySelector('body');
+        if (this.value === 'night'){
+        target.style.backgroundColor = '#261A15';
+        target.style.color = 'white';
+        document.querySelector('#title').style.color = '#f2c777' ;
+        this.value = 'day'
+        this.style.backgroundColor = '#f2c777';
+        }
+        else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        document.querySelector('#title').style.color = '#594327' ;
+        this.value = 'night'
+        this.style.backgroundColor = '#261A15';
+        }
+        ">
+        
+    </div>
+    <img src="opening.jpg" width="600px" loading="lazy" >
+    <div id="grid">
+        <div>
+            <ul>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="socute.html">So Cute</a></li>
+                <li><a href="tmi.html">TMI</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+        <span style="font-size: 20px; padding-left: 20px;" 
+        >Welcome to Munji's hompage</span>
+    </div>
+
+
+           <br><br><br>
+    </div>
+
+</body>
+
+<style>
+    h1 {
+        font-size: 95px;
+        text-align: center;
+        color:#594327;
+        padding-bottom: 40px;
+        /* border-bottom: #594327 1px solid; */
+    }
+
+    ul {
+        font-size: 25px;
+        width: 200px;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    #night_day {
+        font-size: 20px;
+        color: white;
+        border: none;
+        width: 70px;
+        height: 35px;
+    }
+    .btns {
+        padding-bottom: 20px;
+        padding-left: 20px;
+        transition: all 0.2s;
+    }
+
+</style>
+</html>
