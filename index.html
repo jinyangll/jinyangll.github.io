@@ -5,6 +5,32 @@
     <meta charset="utf-8">
 </head>
 <body>
+
+    <input type="button" value="night" style= "background-color: #261A15; text-align: center;" id="night_day" onclick="
+    var target = document.querySelector('body');
+    var links = document.querySelectorAll('#grid a')
+    if (this.value === 'night'){
+    target.style.backgroundColor = '#261A15';
+    target.style.color = 'white';
+    document.querySelector('#title').style.color = '#f2c777' ;
+    this.value = 'day'
+    this.style.backgroundColor = '#f2c777';
+    for (var i = 0; i < links.length; i++) {
+            links[i].style.color = 'white';
+        }
+    }
+    else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    document.querySelector('#title').style.color = '#594327' ;
+    this.value = 'night'
+    this.style.backgroundColor = '#261A15';
+    for (var i = 0; i < links.length; i++) {
+            links[i].style.color = '#333';
+        }
+    
+    }
+    ">
     
     <h1><a href="index.html" style="color: #594327; text-decoration: none;" id="title">Introducing Munji</a></h1>
     <div class = btns>
@@ -23,41 +49,25 @@
             document.querySelector('#night_day').value = 'night'
             }
         "> -->
+        <div>
+            <span style="font-size: 20px; display: block;
+            text-align: center;" 
+        >Welcome to Munji's hompage</span>
+        </div>
 
-        <input type="button" value="night" style= "background-color: #261A15; text-align: center;" id="night_day" onclick="
-        var target = document.querySelector('body');
-        if (this.value === 'night'){
-        target.style.backgroundColor = '#261A15';
-        target.style.color = 'white';
-        document.querySelector('#title').style.color = '#f2c777' ;
-        this.value = 'day'
-        this.style.backgroundColor = '#f2c777';
-        }
-        else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        document.querySelector('#title').style.color = '#594327' ;
-        this.value = 'night'
-        this.style.backgroundColor = '#261A15';
-        }
-        ">
+
         
-    </div>
+    
     <img src="opening.jpg" width="600px" loading="lazy" >
     <div id="grid">
-        <div>
-            <ul>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="socute.html">So Cute</a></li>
-                <li><a href="tmi.html">TMI</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </div>
-        <span style="font-size: 20px; padding-left: 20px;" 
-        >Welcome to Munji's hompage</span>
+    
+        <span><a href="information.html">Information</a></span>
+        <span><a href="socute.html">So Cute</a></span>
+        <span><a href="tmi.html">TMI</a></span>
+        <span><a href="gallery.html">Gallery</a></span>        
     </div>
-
-
+    
+    </div>
            <br><br><br>
     </div>
 
@@ -81,6 +91,7 @@
         display: block;
         margin: auto;
         margin-bottom: 50px;
+        margin-top: 20px;
     }
     #night_day {
         font-size: 20px;
@@ -88,6 +99,9 @@
         border: none;
         width: 70px;
         height: 35px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
     .btns {
         padding-bottom: 20px;
@@ -95,6 +109,24 @@
         transition: all 0.2s;
         
     }
+    #grid {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px ;
+    margin-top: 20px;
+    }
 
+    #grid span {
+        margin: 10px;
+        text-align: center;
+        display: block;
+    }
+
+    #grid a {
+        text-decoration: none;
+        color: #333;
+    }
 </style>
 </html>
