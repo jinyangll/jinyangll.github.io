@@ -9,17 +9,14 @@
         <h1><a href="index.html" style="color: #594327; text-decoration: none;">Introducing Munji</a></h1>
         </div>
         <div>
-        <img src="opening.jpg" width="600px" >
+        <img src="opening.jpg" width="600px" class="img">
         </div>
-        <div>
-        <p>
-            <ul>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="socute.html">So Cute</a></li>
-                <li><a href="tmi.html">TMI</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </p>
+        <div id="grid">
+    
+            <span><a href="information.html">Information</a></span>
+            <span><a href="socute.html">So Cute</a></span>
+            <span><a href="tmi.html">TMI</a></span>
+            <span style = "padding-bottom: 50px;"><a href="gallery.html">Gallery</a></span>        
         </div>
     <div>
         <p>
@@ -28,15 +25,21 @@
         </p>
     </div>
 
-    <div>
-           <br><br><br>
-    </div>
-
     <div id="gallery">
         <img src="bbosilegi.jpg" width="300px">
         <img src="dust.jpg" width="300px">
     </div>
     
+
+    <div id="gallery">
+        <img src="bed.jpg" width="300px">
+        <img src="orangebox.jpg" width="300px">
+    </div>
+
+    <div id="gallery">
+        <img src="jelly.jpg" width="600px">
+    </div>
+
     <div>
         <br><br><br>
     </div>
@@ -52,21 +55,50 @@
     ul {
         font-size: 25px;
     }
-    img {
+    .img {
         display: block;
         margin: auto;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        
+        
     }
     .subtitle {
         font-size: 32px ;
+        padding-top: 50px;
+        
+        
     }
     #gallery {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
+        margin: auto;
         flex-wrap: wrap;
         max-width: 1000px;
+        padding-top: 15px ;
+        padding-bottom: 20px;
         
+    }
+    #grid {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px ;
+    
+    
+    }
+
+    #grid span {
+        margin: 10px;
+        text-align: center;
+        display: block;
+    }
+
+    #grid a {
+        text-decoration: none;
+        color: #333;
     }
 </style>
 </html>
